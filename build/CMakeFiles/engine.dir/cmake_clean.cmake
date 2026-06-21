@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/engine.dir/src/GameScene.cpp.obj"
+  "CMakeFiles/engine.dir/src/GameScene.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/core/AssetManager.cpp.obj"
+  "CMakeFiles/engine.dir/src/core/AssetManager.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/core/Audio.cpp.obj"
+  "CMakeFiles/engine.dir/src/core/Audio.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/core/Input.cpp.obj"
+  "CMakeFiles/engine.dir/src/core/Input.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/core/Physics.cpp.obj"
+  "CMakeFiles/engine.dir/src/core/Physics.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/core/Scene.cpp.obj"
+  "CMakeFiles/engine.dir/src/core/Scene.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/core/SceneManager.cpp.obj"
+  "CMakeFiles/engine.dir/src/core/SceneManager.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/core/ScriptEngine.cpp.obj"
+  "CMakeFiles/engine.dir/src/core/ScriptEngine.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/core/Window.cpp.obj"
+  "CMakeFiles/engine.dir/src/core/Window.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/editor/Editor.cpp.obj"
+  "CMakeFiles/engine.dir/src/editor/Editor.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/main.cpp.obj"
+  "CMakeFiles/engine.dir/src/main.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/renderer/Camera.cpp.obj"
+  "CMakeFiles/engine.dir/src/renderer/Camera.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/renderer/Shader.cpp.obj"
+  "CMakeFiles/engine.dir/src/renderer/Shader.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/renderer/Texture.cpp.obj"
+  "CMakeFiles/engine.dir/src/renderer/Texture.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.obj"
+  "CMakeFiles/engine.dir/src/vendor/imgui/imgui_impl_opengl3.cpp.obj.d"
+  "CMakeFiles/engine.dir/src/vendor/imgui/imgui_impl_sdl2.cpp.obj"
+  "CMakeFiles/engine.dir/src/vendor/imgui/imgui_impl_sdl2.cpp.obj.d"
+  "engine.exe"
+  "engine.exe.manifest"
+  "engine.pdb"
+  "libengine.dll.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/engine.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()
