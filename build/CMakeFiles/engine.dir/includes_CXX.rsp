@@ -1,1 +1,0 @@
--IC:/engine/src -IC:/engine/src/vendor -isystem "C:/vcpkg/installed/x64-mingw-dynamic/include" -isystem "C:/vcpkg/installed/x64-mingw-dynamic/include/SDL2"
