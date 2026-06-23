@@ -2,18 +2,18 @@
 #include "core/SceneManager.h"
 #include "core/Audio.h"
 #include "editor/Editor.h"
-#include "GameScene.h"
+#include "examples/platformer/PlatformerScene.h"
 #include <SDL.h>
 #include <glad/glad.h>
 
 int main(int argc, char* argv[]) {
-    Window window("Forge2D", 800, 600);
+    Window window("Forge2D - Platformer", 800, 600);
     if (!window.init()) return -1;
 
     Audio::init();
     Editor::init(window.getSDLWindow(), window.getGLContext());
 
-    SceneManager::get().push(std::make_shared<GameScene>());
+    SceneManager::get().push(std::make_shared<PlatformerScene>());
 
     Uint32 lastTime = SDL_GetTicks();
     bool running = true;
@@ -26,17 +26,20 @@ int main(int argc, char* argv[]) {
         window.pollEvents(running);
         SceneManager::get().update(deltaTime);
 
-        glClearColor(0.1f, 0.1f, 0.15f, 1.0f);
+        glClearColor(0.2f, 0.3f, 0.4f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         SceneManager::get().render();
 
         Editor::beginFrame();
+        if (auto* scene = dynamic_cast<PlatformerScene*>(SceneManager::get().current()))
+            scene->renderUI();
         Editor::render(SceneManager::get().current());
         Editor::endFrame();
 
         window.swapBuffers();
     }
+
 
     SceneManager::get().pop();
     Editor::shutdown();
