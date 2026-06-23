@@ -13,10 +13,12 @@ struct CollisionResult {
 };
 
 struct Collider {
-    glm::vec2 offset = { 0.0f, 0.0f };
-    glm::vec2 size   = { 100.0f, 100.0f };
-    bool isTrigger   = false;
-    bool isStatic    = false;
+    glm::vec2 offset   = { 0.0f, 0.0f };
+    glm::vec2 size     = { 100.0f, 100.0f };
+    bool isTrigger     = false;
+    bool isStatic      = false;
+    glm::vec2 velocity = { 0.0f, 0.0f };
+    bool onGround      = false;
 };
 
 class Physics {
@@ -24,4 +26,6 @@ public:
     static bool checkAABB(const AABB& a, const AABB& b);
     static CollisionResult resolveAABB(const AABB& a, const AABB& b);
     static AABB getAABB(const glm::vec3& position, const glm::vec2& size, const Collider& collider);
+
+    static const float GRAVITY;
 };

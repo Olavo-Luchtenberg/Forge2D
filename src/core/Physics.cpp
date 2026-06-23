@@ -2,6 +2,8 @@
 #include <algorithm>
 #include <cmath>
 
+const float Physics::GRAVITY = 800.0f;
+
 bool Physics::checkAABB(const AABB& a, const AABB& b) {
     return (a.position.x < b.position.x + b.size.x &&
             a.position.x + a.size.x > b.position.x &&

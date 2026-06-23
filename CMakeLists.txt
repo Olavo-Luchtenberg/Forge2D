@@ -15,7 +15,6 @@ find_package(Lua REQUIRED)
 
 add_executable(engine
     src/main.cpp
-    src/GameScene.cpp
     src/core/Window.cpp
     src/core/Input.cpp
     src/core/Scene.cpp
@@ -30,6 +29,7 @@ add_executable(engine
     src/renderer/Camera.cpp
     src/vendor/imgui/imgui_impl_sdl2.cpp
     src/vendor/imgui/imgui_impl_opengl3.cpp
+    examples/platformer/PlatformerScene.cpp
 )
 
 target_link_libraries(engine
@@ -50,4 +50,5 @@ target_include_directories(engine
     ${LUA_INCLUDE_DIR}
     src
     src/vendor
+    .
 )
